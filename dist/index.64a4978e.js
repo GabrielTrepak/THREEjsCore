@@ -584,6 +584,7 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 }
 
 },{}],"goJYj":[function(require,module,exports) {
+<<<<<<< HEAD
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _three = require("three");
 var _orbitControlsJs = require("three/examples/jsm/controls/OrbitControls.js");
@@ -606,6 +607,19 @@ const orbit = new (0, _orbitControlsJs.OrbitControls)(camera, renderer.domElemen
 const axesHelper = new _three.AxesHelper(3);
 scene.add(axesHelper);
 camera.position.set(-10, 32, 30);
+=======
+var _three = require("three");
+var _orbitControlsJs = require("three/examples/jsm/controls/OrbitControls.js");
+const renderer = new _three.WebGLRenderer();
+renderer.setSize(window.innerWidth, window.innerHeight);
+document.body.appendChild(renderer.domElement);
+const scene = new _three.Scene();
+const camera = new _three.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+const orbit = new (0, _orbitControlsJs.OrbitControls)(camera, renderer.domElement);
+const axesHelper = new _three.AxesHelper(3);
+scene.add(axesHelper);
+camera.position.set(0, 2, 5);
+>>>>>>> bacd345540647ece5184fff83bd58869587eaf78
 orbit.update();
 const boxGeometry = new _three.BoxGeometry();
 const material = new _three.MeshBasicMaterial({
@@ -613,6 +627,7 @@ const material = new _three.MeshBasicMaterial({
 });
 const box = new _three.Mesh(boxGeometry, material);
 scene.add(box);
+<<<<<<< HEAD
 const planeGeometry = new _three.PlaneGeometry(30, 30);
 const planeMaterial = new _three.MeshStandardMaterial({
     color: 0xffffff,
@@ -770,6 +785,16 @@ window.addEventListener("resize", function() {
 });
 
 },{"three":"ktPTu","three/examples/jsm/controls/OrbitControls.js":"7mqRv","dat.gui":"k3xQk","@parcel/transformer-js/src/esmodule-helpers.js":"1gcAI","../img/space.jpeg":"3gPbX","../img/PN.png":"5RSfQ","../img/PE.png":"8t0V0","3d09ece659c11f91":"lgN9K","three/examples/jsm/loaders/GLTFLoader.js":"dVRsF"}],"ktPTu":[function(require,module,exports) {
+=======
+function animate(time) {
+    box.rotation.x = time / 2000;
+    box.rotation.y = time / 1000;
+    renderer.render(scene, camera);
+}
+renderer.setAnimationLoop(animate);
+
+},{"three":"ktPTu","three/examples/jsm/controls/OrbitControls.js":"7mqRv"}],"ktPTu":[function(require,module,exports) {
+>>>>>>> bacd345540647ece5184fff83bd58869587eaf78
 /**
  * @license
  * Copyright 2010-2024 Three.js Authors
@@ -32994,6 +33019,7 @@ class OrbitControls extends (0, _three.EventDispatcher) {
     }
 }
 
+<<<<<<< HEAD
 },{"three":"ktPTu","@parcel/transformer-js/src/esmodule-helpers.js":"1gcAI"}],"k3xQk":[function(require,module,exports) {
 /**
  * dat-gui JavaScript Controller Library
@@ -38451,6 +38477,8 @@ function mergeGroups(geometry) {
     return resultGeometry;
 }
 
+=======
+>>>>>>> bacd345540647ece5184fff83bd58869587eaf78
 },{"three":"ktPTu","@parcel/transformer-js/src/esmodule-helpers.js":"1gcAI"}]},["juk2P","goJYj"], "goJYj", "parcelRequiredd4a")
 
 //# sourceMappingURL=index.64a4978e.js.map

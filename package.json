@@ -10,7 +10,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+<<<<<<< HEAD
     "dat.gui": "^0.7.9",
+=======
+>>>>>>> bacd345540647ece5184fff83bd58869587eaf78
     "three": "^0.166.1"
   }
 }
