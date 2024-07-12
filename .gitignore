@@ -1,0 +1,5 @@
+# Ignorar o diretório .parcel-cache e seus conteúdos
+.parcel-cache/
+
+# Ignorar o arquivo data.mdb
+.parcel-cache/data.mdb
